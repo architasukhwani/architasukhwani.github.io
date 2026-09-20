@@ -246,53 +246,47 @@ section.block h2 {
 
 /* Experience */
 .job {
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  gap: 20px;
-  padding: 20px 0;
+  padding: 22px 0;
   border-bottom: 1px dashed var(--border);
 }
 .job:last-child { border-bottom: none; }
 
-.job .when {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  padding-top: 2px;
+.job-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 4px;
+}
+
+.job-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+.job-logo.fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: none;
 }
 
 .job h3 { margin: 0 0 2px; font-size: 1.05rem; }
-.job .org { color: var(--accent); font-weight: 600; }
-.job .place { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 10px; }
-.job ul { margin: 10px 0 0; padding-left: 20px; }
+.job-meta { color: var(--text-muted); font-size: 0.88rem; }
+.job-meta .org { color: var(--accent); font-weight: 600; }
+.job .place { color: var(--text-muted); font-size: 0.85rem; margin: 2px 0 0; }
+.job ul { margin: 12px 0 0; padding-left: 20px; }
 .job li { margin-bottom: 6px; color: var(--text-muted); }
 .job li strong { color: var(--text); }
-
-.company-group {
-  border-bottom: 1px dashed var(--border);
-  padding: 20px 0;
-}
-.company-group:last-child { border-bottom: none; }
-.company-header {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  margin-bottom: 4px;
-  flex-wrap: wrap;
-}
-.company-header h3 { margin: 0; font-size: 1.1rem; }
-.company-header .org-total { color: var(--text-muted); font-size: 0.85rem; }
-.role {
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  gap: 20px;
-  padding: 14px 0 0;
-}
-.role .when { color: var(--text-muted); font-size: 0.85rem; }
-.role .title { font-weight: 600; }
-.role .place { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 6px; }
-.role ul { margin: 8px 0 0; padding-left: 20px; }
-.role li { margin-bottom: 6px; color: var(--text-muted); }
-.role li strong { color: var(--text); }
 
 /* Projects */
 .projects-grid {
@@ -311,26 +305,6 @@ section.block h2 {
 .project-card .date { color: var(--text-muted); font-size: 0.82rem; margin-bottom: 10px; }
 .project-card ul { margin: 0; padding-left: 18px; }
 .project-card li { margin-bottom: 6px; color: var(--text-muted); font-size: 0.93rem; }
-
-/* Achievements */
-.achievements-list { list-style: none; margin: 0; padding: 0; }
-.achievements-list li {
-  display: flex;
-  gap: 12px;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border);
-  color: var(--text-muted);
-}
-.achievements-list li:last-child { border-bottom: none; }
-.achievements-list .badge {
-  flex-shrink: 0;
-  width: 28px; height: 28px;
-  border-radius: 50%;
-  background: var(--accent-soft);
-  color: var(--accent);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.85rem;
-}
 
 /* Contact */
 .contact-grid {
